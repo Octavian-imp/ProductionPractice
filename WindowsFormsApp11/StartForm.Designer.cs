@@ -96,7 +96,6 @@
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "StartForm";
             this.Text = "Home";
-            this.Load += new System.EventHandler(this.StartForm_Load);
             this.ResumeLayout(false);
 
         }

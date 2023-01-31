@@ -61,11 +61,6 @@ namespace WindowsFormsApp11
             button3.Cursor = Cursors.Default;
         }
 
-        private void StartForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             new ShowAllForm().Show();
