@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/*Спроектировано и разработано Octavian-imp*/
+
 namespace WindowsFormsApp11
 {
     public partial class StartForm : Form
