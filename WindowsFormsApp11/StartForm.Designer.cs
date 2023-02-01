@@ -47,8 +47,8 @@
             this.button1.Text = "ОСТАТКИ";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            this.button1.MouseLeave += new System.EventHandler(this.button1_MouseLeave);
-            this.button1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button1_MouseMove);
+            this.button1.MouseLeave += new System.EventHandler(this.button_MouseLeave);
+            this.button1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button_MouseMove);
             // 
             // button2
             // 
@@ -64,8 +64,8 @@
             this.button2.Text = "ДОБАВИТЬ";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            this.button2.MouseLeave += new System.EventHandler(this.button2_MouseLeave);
-            this.button2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button2_MouseMove);
+            this.button2.MouseLeave += new System.EventHandler(this.button_MouseLeave);
+            this.button2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button_MouseMove);
             // 
             // button3
             // 
@@ -81,8 +81,8 @@
             this.button3.Text = "УДАЛИТЬ";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
-            this.button3.MouseLeave += new System.EventHandler(this.button3_MouseLeave);
-            this.button3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button3_MouseMove);
+            this.button3.MouseLeave += new System.EventHandler(this.button_MouseLeave);
+            this.button3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button_MouseMove);
             // 
             // StartForm
             // 
