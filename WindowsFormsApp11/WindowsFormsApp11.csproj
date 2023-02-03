@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Anim.cs" />
+    <Compile Include="DB.cs" />
     <Compile Include="DeleteForm.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -80,6 +80,7 @@
             this.button1.TabIndex = 3;
             this.button1.Text = "УДАЛИТЬ";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             this.button1.MouseLeave += new System.EventHandler(this.button_MouseLeave);
             this.button1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button_MouseMove);
             // 

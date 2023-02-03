@@ -115,9 +115,6 @@
             this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox1.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Компьютер",
-            "Пылесос"});
             this.comboBox1.Location = new System.Drawing.Point(60, 276);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(308, 31);
@@ -137,6 +134,7 @@
             this.button1.TabIndex = 7;
             this.button1.Text = "Добавить";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             this.button1.MouseLeave += new System.EventHandler(this.button_MouseLeave);
             this.button1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button_MouseMove);
             // 
@@ -156,6 +154,7 @@
             this.Controls.Add(this.label1);
             this.Name = "AddForm";
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.AddForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -8,11 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static WindowsFormsApp11.Anim;
+using System.Data.SqlClient;
 
 namespace WindowsFormsApp11
 {
     public partial class AddForm : Form
     {
+        DB dataBase = new DB();
+
         public AddForm()
         {
             InitializeComponent();
@@ -46,6 +49,46 @@ namespace WindowsFormsApp11
         private void button_MouseLeave(object sender, EventArgs e)
         {
             AnimButton_MouseLeave(sender, e);
+        }
+
+        private void AddForm_Load(object sender, EventArgs e)
+        {
+            dataBase.openConnection();
+            string fillComboBoxItemsQuery = $"select name from types order by id asc";
+            SqlCommand fillComboBoxItemsCommand = new SqlCommand(fillComboBoxItemsQuery, dataBase.getConnection());
+            SqlDataReader reader = fillComboBoxItemsCommand.ExecuteReader();
+            while (reader.Read())
+            {
+                RefreshItemsComboBox(comboBox1, reader);
+            }
+            reader.Close();
+            dataBase.closeConnection();
+        }
+
+        private void RefreshItemsComboBox(ComboBox comboBox, IDataRecord record)
+        {
+            comboBox.Items.Add($"{record.GetString(0)}");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            dataBase.openConnection();
+            string name = textBox1.Text;
+            int quantity;
+            if (int.TryParse(textBox2.Text, out quantity))
+            {
+                int IdType = comboBox1.SelectedIndex + 1;
+                string type = comboBox1.Text;
+                string addQuery = $"insert into resources (name, type, quantity) values ('{name}','{IdType}','{quantity}')";
+                SqlCommand addQueryCommand = new SqlCommand(addQuery, dataBase.getConnection());
+                addQueryCommand.ExecuteNonQuery();
+                MessageBox.Show($"Добавлена запись:\n Наименование:'{name}'\n Тип устройства:'{type}'\n Количество: {quantity}","Успешно)", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Неверный тип данных! Введите число", "Ошибка(", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            dataBase.closeConnection();
         }
     }
 }
