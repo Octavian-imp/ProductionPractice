@@ -83,6 +83,7 @@ namespace WindowsFormsApp11
                 SqlCommand addQueryCommand = new SqlCommand(addQuery, dataBase.getConnection());
                 addQueryCommand.ExecuteNonQuery();
                 MessageBox.Show($"Добавлена запись:\n Наименование:'{name}'\n Тип устройства:'{type}'\n Количество: {quantity}","Успешно)", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
             }
             else
             {

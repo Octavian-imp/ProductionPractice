@@ -44,5 +44,15 @@ namespace WindowsFormsApp11
         {
             new DeleteForm().Show();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            new JournalForm().Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            new ChangeStatus().Show();
+        }
     }
 }
