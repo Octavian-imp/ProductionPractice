@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using static WindowsFormsApp11.Anim;
 
@@ -43,6 +36,21 @@ namespace WindowsFormsApp11
         private void button3_Click(object sender, EventArgs e)
         {
             new DeleteForm().Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            new JournalForm().Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            new ChangeStatus().Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            new SupportRequest().Show();
         }
     }
 }

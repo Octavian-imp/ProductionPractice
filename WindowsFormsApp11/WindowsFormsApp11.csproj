@@ -50,16 +50,25 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Anim.cs" />
+    <Compile Include="DB.cs" />
     <Compile Include="DeleteForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DeleteForm.Designer.cs">
       <DependentUpon>DeleteForm.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="ProductionPracticeDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ProductionPracticeDataSet.xsd</DependentUpon>
+=======
+    <Compile Include="JournalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JournalForm.Designer.cs">
+      <DependentUpon>JournalForm.cs</DependentUpon>
+>>>>>>> 94b69bf7b147112eb2d1151213796bbda940c4c1
     </Compile>
     <Compile Include="ShowAllForm.cs">
       <SubType>Form</SubType>
@@ -81,8 +90,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ChangeStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeStatus.Designer.cs">
+      <DependentUpon>ChangeStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SupportRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SupportRequest.Designer.cs">
+      <DependentUpon>SupportRequest.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="DeleteForm.resx">
       <DependentUpon>DeleteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JournalForm.resx">
+      <DependentUpon>JournalForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ShowAllForm.resx">
       <DependentUpon>ShowAllForm.cs</DependentUpon>
@@ -102,6 +126,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <None Include="ProductionPracticeDataSet.xsc">
       <DependentUpon>ProductionPracticeDataSet.xsd</DependentUpon>
     </None>
@@ -113,6 +138,14 @@
     <None Include="ProductionPracticeDataSet.xss">
       <DependentUpon>ProductionPracticeDataSet.xsd</DependentUpon>
     </None>
+=======
+    <EmbeddedResource Include="ChangeStatus.resx">
+      <DependentUpon>ChangeStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SupportRequest.resx">
+      <DependentUpon>SupportRequest.cs</DependentUpon>
+    </EmbeddedResource>
+>>>>>>> 94b69bf7b147112eb2d1151213796bbda940c4c1
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
