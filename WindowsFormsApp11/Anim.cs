@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Drawing;
+using System.Windows.Forms;
 
 namespace WindowsFormsApp11
 {
@@ -18,7 +14,7 @@ namespace WindowsFormsApp11
             btn.ForeColor = Color.White;
             btn.Cursor = Cursors.Hand;
         }
-      
+
         public static void AnimButton_MouseLeave(object sender, EventArgs e)
         {
             Button btn = sender as Button;
@@ -26,7 +22,7 @@ namespace WindowsFormsApp11
             btn.ForeColor = Color.Black;
             btn.Cursor = Cursors.Default;
         }
-        
+
         //Анимация для полей
         public static void AnimTextBox_MouseMove(object sender, MouseEventArgs e)
         {
@@ -36,8 +32,8 @@ namespace WindowsFormsApp11
 
         public static void AnimTextBox_MouseLeave(object sender, EventArgs e)
         {
-            TextBox txt= sender as TextBox; 
-            txt.BackColor= Color.DimGray;
+            TextBox txt = sender as TextBox;
+            txt.BackColor = Color.DimGray;
         }
 
         //Анимация для выпадающих списков с выбором значения
@@ -49,8 +45,8 @@ namespace WindowsFormsApp11
 
         public static void AnimComboBox_MouseLeave(object sender, EventArgs e)
         {
-            ComboBox cmb= sender as ComboBox;
-            cmb.BackColor= Color.DimGray;
+            ComboBox cmb = sender as ComboBox;
+            cmb.BackColor = Color.DimGray;
         }
     }
 }

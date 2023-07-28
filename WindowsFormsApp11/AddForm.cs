@@ -1,14 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 using static WindowsFormsApp11.Anim;
-using System.Data.SqlClient;
 
 namespace WindowsFormsApp11
 {
@@ -82,7 +76,7 @@ namespace WindowsFormsApp11
                 string addQuery = $"insert into resources (name, type, quantity) values ('{name}','{IdType}','{quantity}')";
                 SqlCommand addQueryCommand = new SqlCommand(addQuery, dataBase.getConnection());
                 addQueryCommand.ExecuteNonQuery();
-                MessageBox.Show($"Добавлена запись:\n Наименование:'{name}'\n Тип устройства:'{type}'\n Количество: {quantity}","Успешно)", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"Добавлена запись:\n Наименование:'{name}'\n Тип устройства:'{type}'\n Количество: {quantity}", "Успешно)", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }
             else

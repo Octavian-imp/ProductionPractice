@@ -1,13 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 using static WindowsFormsApp11.Anim;
 
 namespace WindowsFormsApp11
@@ -81,7 +75,12 @@ namespace WindowsFormsApp11
             reader.Close();
             dataBase.closeConnection();
         }
-        
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            refreshDataGrid(dataGridView1);
+        }
+
         private void readSingleRow(DataGridView dgw, IDataReader record)
         {
             dgw.Rows.Add(record.GetInt32(0), record.GetInt32(1), Convert.ToDateTime(record.GetDateTime(2)).ToString("dd/MM/yyyy"), record.GetInt32(3), Convert.ToDateTime(record.GetDateTime(4)).ToString("dd/MM/yyyy"), record.GetInt32(5));
@@ -95,11 +94,6 @@ namespace WindowsFormsApp11
         private void button_MouseLeave(object sender, EventArgs e)
         {
             AnimButton_MouseLeave(sender, e);
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            refreshDataGrid(dataGridView1);
         }
     }
 }

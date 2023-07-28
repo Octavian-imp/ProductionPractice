@@ -89,6 +89,12 @@
     <Compile Include="ChangeStatus.Designer.cs">
       <DependentUpon>ChangeStatus.cs</DependentUpon>
     </Compile>
+    <Compile Include="SupportRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SupportRequest.Designer.cs">
+      <DependentUpon>SupportRequest.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="DeleteForm.resx">
       <DependentUpon>DeleteForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -115,6 +121,9 @@
     </Compile>
     <EmbeddedResource Include="ChangeStatus.resx">
       <DependentUpon>ChangeStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SupportRequest.resx">
+      <DependentUpon>SupportRequest.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

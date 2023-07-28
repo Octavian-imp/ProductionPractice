@@ -1,14 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Data.SqlClient;
-using static WindowsFormsApp11.DB;
+using System.Windows.Forms;
 using static WindowsFormsApp11.Anim;
 
 namespace WindowsFormsApp11
@@ -46,7 +39,7 @@ namespace WindowsFormsApp11
             {
                 MessageBox.Show("Соединение не установлено", "Провал(", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            
+
             dataBase.closeConnection();
         }
 
@@ -80,7 +73,7 @@ namespace WindowsFormsApp11
 
             string query = $"select * from Resources";
 
-            SqlCommand command= new SqlCommand(query, dataBase.getConnection());
+            SqlCommand command = new SqlCommand(query, dataBase.getConnection());
 
             dataBase.openConnection();
 
