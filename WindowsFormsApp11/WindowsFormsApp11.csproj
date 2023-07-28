@@ -56,6 +56,11 @@
     <Compile Include="DeleteForm.Designer.cs">
       <DependentUpon>DeleteForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProductionPracticeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProductionPracticeDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ShowAllForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +102,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="ProductionPracticeDataSet.xsc">
+      <DependentUpon>ProductionPracticeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ProductionPracticeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProductionPracticeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProductionPracticeDataSet.xss">
+      <DependentUpon>ProductionPracticeDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

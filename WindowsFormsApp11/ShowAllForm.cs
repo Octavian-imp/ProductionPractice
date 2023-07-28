@@ -16,5 +16,12 @@ namespace WindowsFormsApp11
         {
             InitializeComponent();
         }
+
+        private void ShowAllForm_Load(object sender, EventArgs e)
+        {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "productionPracticeDataSet.Resources". При необходимости она может быть перемещена или удалена.
+            this.resourcesTableAdapter.Fill(this.productionPracticeDataSet.Resources);
+
+        }
     }
 }
